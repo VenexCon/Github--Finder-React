@@ -18,25 +18,6 @@ export const GithubProvider = ({ children }) => {
   //returns new state, based on the action type
   const [state, dispatch] = useReducer(GithubReducer, initialState);
 
-  // Get Search Results
-  const searchUsers = async (text) => {
-    setLoading();
-
-    const params = new URLSearchParams({
-      q: text,
-    });
-
-    const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
-    });
-
-    const { items } = await response.json();
-
-    dispatch({ type: "GET_USERS", payload: items });
-  };
-
   //get a single user
   const getUser = async (login) => {
     setLoading();
@@ -90,14 +71,11 @@ export const GithubProvider = ({ children }) => {
   return (
     <GithubContext.Provider
       value={{
-        users: state.users,
-        loading: state.loading,
-        searchUsers,
+        ...state,
+        dispatch,
         clearUsers,
-        user: state.user,
         getUser,
         getUserRepos,
-        repos: state.repos,
       }}
       //No longer passing initialState into the values, but the values of the returned reducer state.
     >
