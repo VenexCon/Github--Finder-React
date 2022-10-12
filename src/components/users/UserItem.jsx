@@ -1,4 +1,4 @@
-import userEvent from '@testing-library/user-event'
+/* import userEvent from '@testing-library/user-event' */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
