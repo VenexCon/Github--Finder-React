@@ -7,17 +7,12 @@ const GithubReducer = (state, action) => {
       return { ...state, loading: action.payload.loading };
     //CD attempt
     case "CLEAR_USERS":
-      return { ...state, users: action.payload.users };
-    case "GET_USER":
+      return { ...state, users: [] };
+    case "GET_USER_AND_REPOS":
       return {
         ...state,
-        user: action.payload.data,
-        loading: action.payload.loading,
-      };
-    case "SET_REPOS":
-      return {
-        ...state,
-        repos: action.payload.data,
+        user: action.payload.data.user,
+        repos: action.payload.data.repos,
         loading: action.payload.loading,
       };
 
