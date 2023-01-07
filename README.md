@@ -10,7 +10,7 @@ A website built using React and Material-UI that enables users to search for oth
 
 ## Technologies Used
 
-[![Skills used](https://skillicons.dev/icons?i=js,html,css,materialui)](https://skillicons.dev)
+[![Skills used](https://skillicons.dev/icons?i=js,html,css,materialui, react)](https://skillicons.dev)
 
 ## Screenshots
 
