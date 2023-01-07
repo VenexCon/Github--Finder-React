@@ -13,7 +13,7 @@ A website built using React and Material-UI that enables users to search for oth
 - GitHub API
 
 ## Screenshots
-![Alt text](https://imgur.com/jCADLCm "Index Page")
+<img src = 'https://imgur.com/jCADLCm' alt = 'Index Page'>
 
 ## Deployment
 Insert instructions for how to deploy your website here
